@@ -29,7 +29,7 @@ function ResultsItem ({ user }) {
 
       <div className="text-box">
         <p className="me">{user.login}</p>
-        <Link to={`/profile/${user.login}`}>Visit Profile</Link>
+        <Link to={`/profile/${user.login}`} className='sm'>Visit Profile</Link>
       </div>
 
     </li>

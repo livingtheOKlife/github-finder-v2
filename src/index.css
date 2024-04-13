@@ -477,6 +477,119 @@ footer nav a:hover {
 a:not(.btn) {
   color: hsl(210, 96%, 40%);
   transition: all 0.16s ease-in-out;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1.16px;
+  line-height: 1.42;
+}
+a:not(.btn).xl {
+  font-size: 19px;
+}
+@media screen and (min-width: 600px) {
+  a:not(.btn).xl {
+    font-size: 20.52px;
+  }
+}
+@media screen and (min-width: 768px) {
+  a:not(.btn).xl {
+    font-size: 22.1616px;
+  }
+}
+@media screen and (min-width: 992px) {
+  a:not(.btn).xl {
+    font-size: 23.934528px;
+  }
+}
+a:not(.btn).la {
+  font-size: 16px;
+}
+@media screen and (min-width: 600px) {
+  a:not(.btn).la {
+    font-size: 17.28px;
+  }
+}
+@media screen and (min-width: 768px) {
+  a:not(.btn).la {
+    font-size: 18.6624px;
+  }
+}
+@media screen and (min-width: 992px) {
+  a:not(.btn).la {
+    font-size: 20.155392px;
+  }
+}
+a:not(.btn).me {
+  font-size: 14px;
+}
+@media screen and (min-width: 600px) {
+  a:not(.btn).me {
+    font-size: 15.12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  a:not(.btn).me {
+    font-size: 16.3296px;
+  }
+}
+@media screen and (min-width: 992px) {
+  a:not(.btn).me {
+    font-size: 17.635968px;
+  }
+}
+a:not(.btn).sm {
+  font-size: 12px;
+}
+@media screen and (min-width: 600px) {
+  a:not(.btn).sm {
+    font-size: 12.96px;
+  }
+}
+@media screen and (min-width: 768px) {
+  a:not(.btn).sm {
+    font-size: 13.9968px;
+  }
+}
+@media screen and (min-width: 992px) {
+  a:not(.btn).sm {
+    font-size: 15.116544px;
+  }
+}
+a:not(.btn).xs {
+  font-size: 10px;
+}
+@media screen and (min-width: 600px) {
+  a:not(.btn).xs {
+    font-size: 10.8px;
+  }
+}
+@media screen and (min-width: 768px) {
+  a:not(.btn).xs {
+    font-size: 11.664px;
+  }
+}
+@media screen and (min-width: 992px) {
+  a:not(.btn).xs {
+    font-size: 12.59712px;
+  }
+}
+a:not(.btn).copyright {
+  font-size: 8px;
+}
+@media screen and (min-width: 600px) {
+  a:not(.btn).copyright {
+    font-size: 8.64px;
+  }
+}
+@media screen and (min-width: 768px) {
+  a:not(.btn).copyright {
+    font-size: 9.3312px;
+  }
+}
+@media screen and (min-width: 992px) {
+  a:not(.btn).copyright {
+    font-size: 10.077696px;
+  }
 }
 a:not(.btn):hover {
   color: hsl(32, 96%, 48%);
@@ -843,7 +956,58 @@ label.copyright {
 }
 
 #main-container {
+  height: 100%;
+  overflow-y: scroll;
   padding: 32px;
+}
+#main-container.home ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#main-container.home ul li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  max-width: 350px;
+  padding: 16px;
+  border-radius: 16px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.16);
+}
+#main-container.home ul li img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+#main-container.home ul li .text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+#main-container.home ul li .text-box p {
+  margin-left: 6px;
+}
+#main-container.home ul li .text-box a {
+  padding: 6px;
+}
+@media screen and (min-width: 768px) {
+  #main-container.home ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 992px) {
+  #main-container.home ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 #main-container.about {
   display: flex;
