@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#me
+.env
+/src/stylesheets
+/src/index.scss
+/src/index.css.map
