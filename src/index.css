@@ -935,7 +935,7 @@ label.copyright {
 }
 #header-container nav#main-nav .links a {
   padding: 8px;
-  font-size: 22px;
+  font-size: 16px;
   color: hsl(210, 100%, 2%);
 }
 @media (prefers-color-scheme: dark) {
