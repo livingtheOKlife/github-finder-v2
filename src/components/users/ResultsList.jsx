@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Loading from '../shared/Loading'
+import ResultsItem from './ResultsItem'
 
 /**--------------------------------------------------------------------------- ResultsList component function
  * 
@@ -65,7 +66,9 @@ function ResultsList () {
 
         {
           users.map((user) => (
-            <li>{user.login}</li>
+            
+            <ResultsItem user={user} key={user.login} />
+            
           ))
         }
 
