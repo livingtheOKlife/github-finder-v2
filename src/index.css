@@ -869,4 +869,41 @@ label.copyright {
   padding: 12px 32px;
   border-radius: 8px;
   margin-top: 16px;
+}
+
+.loading {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 84px;
+  margin: 32px auto;
+}
+.loading .dot {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin: 0 6px;
+  background-color: hsl(210, 96%, 40%);
+  animation: loading 0.48s infinite alternate cubic-bezier(0.64, 0.08, 0.96, 0.48);
+}
+.loading .dot:nth-of-type(2) {
+  animation-delay: 0.16s;
+}
+.loading .dot:nth-of-type(3) {
+  animation-delay: 0.32s;
+}
+@media (prefers-color-scheme: dark) {
+  .loading .dot {
+    background-color: hsl(32, 96%, 48%);
+  }
+}
+
+@keyframes loading {
+  from {
+    transform: translateY(-12px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=index.css.map */
