@@ -788,4 +788,56 @@ label.copyright {
   .App * {
     color: hsl(210, 0%, 98%);
   }
+}
+
+#header-container {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.32);
+}
+#header-container nav#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  padding: 16px;
+  margin: 0 auto;
+}
+#header-container nav#main-nav span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+}
+#header-container nav#main-nav span svg {
+  font-size: 32px;
+}
+#header-container nav#main-nav .links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+#header-container nav#main-nav .links a {
+  padding: 8px;
+  font-size: 22px;
+  color: hsl(210, 100%, 2%);
+}
+@media (prefers-color-scheme: dark) {
+  #header-container nav#main-nav .links a {
+    color: hsl(210, 0%, 98%);
+  }
+}
+
+#footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.32);
 }/*# sourceMappingURL=index.css.map */

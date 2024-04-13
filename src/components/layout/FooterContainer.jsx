@@ -14,11 +14,20 @@
 
 function FooterContainer () {
 
+  // ------------------------- year variable
+
+  const year = new Date().getFullYear()
+
   // ------------------------- return
 
   return (
 
-    <footer id="footer-container">FooterContainer</footer>
+    <footer id="footer-container">
+
+      <p className="sm"><span className="brand">livingthe<em>OK</em>life</span></p>
+      <p className="copyright">Copyright &copy; {year} All Rights Reserved</p>
+
+    </footer>
 
   )
 
