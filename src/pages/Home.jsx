@@ -1,4 +1,5 @@
 import MainContainer from '../components/layout/MainContainer'
+import ResultsList from '../components/users/ResultsList'
 
 /**--------------------------------------------------------------------------- Home page function
  * 
@@ -21,7 +22,9 @@ function Home () {
   return (
 
     <MainContainer className='home'>
-      MainContainer - home page
+
+      <ResultsList />
+      
     </MainContainer>
 
   )
