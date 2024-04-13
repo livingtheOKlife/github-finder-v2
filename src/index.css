@@ -840,4 +840,33 @@ label.copyright {
   width: 100%;
   padding: 16px;
   background-color: rgba(0, 0, 0, 0.32);
+}
+
+#main-container {
+  padding: 32px;
+}
+#main-container.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+#main-container.about p {
+  text-align: center;
+}
+#main-container.about p:first-of-type {
+  margin-bottom: 16px;
+}
+#main-container.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+#main-container.not-found .btn {
+  padding: 12px 32px;
+  border-radius: 8px;
+  margin-top: 16px;
 }/*# sourceMappingURL=index.css.map */
