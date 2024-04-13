@@ -627,15 +627,9 @@ a:not(.btn):hover {
   color: hsl(210, 0%, 98%);
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 4px 8px;
 }
-.btn.btn-main *, .icon-btn.btn-main * {
-  color: hsl(210, 0%, 98%);
-}
 @media (prefers-color-scheme: dark) {
   .btn.btn-main, .icon-btn.btn-main {
     background-color: hsl(32, 96%, 48%);
-    color: hsl(210, 0%, 98%);
-  }
-  .btn.btn-main *, .icon-btn.btn-main * {
     color: hsl(210, 0%, 98%);
   }
 }
@@ -890,15 +884,117 @@ label.copyright {
   height: 100dvh;
   width: 100dvw;
 }
-.App * {
-  color: hsl(210, 100%, 2%);
-}
 @media (prefers-color-scheme: dark) {
   .App {
     background-color: #011428;
     color: hsl(210, 0%, 98%);
   }
-  .App * {
+}
+
+#toast {
+  position: absolute;
+  top: 96px;
+  right: 16px;
+  border-radius: 8px;
+  background-color: hsl(210, 0%, 98%);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 4px 8px;
+  overflow: hidden;
+  z-index: 1000;
+  animation: toast-pop 3.64s forwards ease-out;
+}
+#toast .toast-bg {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px 20px 16px;
+  background-color: rgba(0, 0, 0, 0.16);
+}
+#toast .toast-bg > svg {
+  font-size: 29px;
+}
+#toast .toast-bg p {
+  font-size: 16px;
+  color: hsl(210, 100%, 2%);
+}
+#toast .toast-bg button {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.16s ease-in-out;
+}
+@media screen and (min-width: 600px) {
+  #toast .toast-bg button {
+    font-size: 15.12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #toast .toast-bg button {
+    font-size: 16.3296px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #toast .toast-bg button {
+    font-size: 17.635968px;
+  }
+}
+#toast .toast-bg button:hover {
+  background-color: rgba(0, 0, 0, 0.16);
+}
+@media (prefers-color-scheme: dark) {
+  #toast .toast-bg button {
+    background-color: rgba(255, 255, 255, 0);
+    color: hsl(210, 0%, 98%);
+  }
+  #toast .toast-bg button:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+}
+#toast .toast-bg .progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+#toast .toast-bg .progress-bar .bg {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+#toast .toast-bg .progress-bar .bg .fg {
+  height: 100%;
+  animation: progress-bar-drain 3s forwards linear;
+  animation-delay: 0.32s;
+}
+#toast.error .toast-bg > svg {
+  color: hsl(0, 64%, 48%);
+}
+#toast.error .toast-bg .progress-bar .fg {
+  background-color: hsl(0, 64%, 48%);
+}
+#toast.success .toast-bg > svg {
+  color: hsl(92, 64%, 48%);
+}
+#toast.success .toast-bg .progress-bar .bg .fg {
+  background-color: hsl(92, 64%, 48%);
+}
+@media (prefers-color-scheme: dark) {
+  #toast {
+    background-color: #011428;
+  }
+  #toast .toast-bg {
+    background-color: rgba(0, 0, 0, 0.16);
+  }
+  #toast .toast-bg p {
     color: hsl(210, 0%, 98%);
   }
 }
@@ -924,9 +1020,15 @@ label.copyright {
   font-family: "Poppins", sans-serif;
   font-size: 22px;
   font-weight: 300;
+  color: hsl(210, 100%, 2%);
 }
 #header-container nav#main-nav span svg {
   font-size: 32px;
+}
+@media (prefers-color-scheme: dark) {
+  #header-container nav#main-nav span {
+    color: hsl(210, 0%, 98%);
+  }
 }
 #header-container nav#main-nav .links {
   display: flex;
