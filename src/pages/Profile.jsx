@@ -34,6 +34,7 @@ function Profile () {
   useEffect(() => {
 
     dispatch({type: 'SET_LOADING'})
+    
     const getUserData = async () => {
 
       const userData = await getUserAndRepos(params.login)
@@ -53,7 +54,7 @@ function Profile () {
 
     loading ? <Loading />
 
-    : <MainContainer className='profile'>MainContainer - {user.login} page</MainContainer>
+    : <MainContainer className='profile'>MainContainer - page</MainContainer>
 
   )
 

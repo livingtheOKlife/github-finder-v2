@@ -27,7 +27,11 @@ function ResultsList () {
   
   return (
 
-    loading ? 
+    users === undefined && !loading ?
+
+      <></>
+
+    : loading ? 
       
       <Loading />
 
