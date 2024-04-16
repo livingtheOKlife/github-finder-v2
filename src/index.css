@@ -1129,6 +1129,7 @@ label.copyright {
 #main-container.home {
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 32px;
 }
 #main-container.home form {
@@ -1138,7 +1139,10 @@ label.copyright {
   gap: 16px;
   width: 100%;
   max-width: 550px;
-  margin: auto;
+  margin: 0 auto;
+}
+#main-container.home p.no-users {
+  margin: 0 auto;
 }
 #main-container.home ul {
   display: flex;

@@ -1,10 +1,8 @@
 import { useState, useContext } from 'react'
 import AlertContext from '../../context/alert/AlertContext'
 import GithubContext from '../../context/github/GithubContext'
+import { searchUsers } from '../../context/github/GithubActions'
 import { FaSearch } from 'react-icons/fa'
-
-const GITHUB_URL = process.env.REACT_APP_GITHUB_URL
-const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN
 
 /**--------------------------------------------------------------------------- SearchBar component function
  * 
@@ -36,26 +34,6 @@ function SearchBar () {
   const onChange = (e) => {
 
     setText(e.target.value)
-
-  }
-
-  // ------------------------- searchUsers
-
-  const searchUsers = async (text) => {
-
-    const params = new URLSearchParams({
-      q: text
-    })
-
-    const response = await fetch(`${GITHUB_URL}/search/users?${params}`, {
-      headers: {
-        Authorization: `token ${GITHUB_TOKEN}`
-      }
-    })
-
-    const data = await response.json()
-
-    return data.items
 
   }
 
