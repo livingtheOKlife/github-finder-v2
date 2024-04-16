@@ -37,6 +37,8 @@ export function AlertProvider ({ children }) {
       payload: {msg, type}
     })
 
+    setTimeout(() => dispatch({ type: 'SET_TOAST_INACTIVE' }), 3000)
+
   }
 
   // ------------------------- return
