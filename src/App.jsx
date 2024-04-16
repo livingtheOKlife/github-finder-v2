@@ -1,4 +1,5 @@
 import { AlertProvider } from './context/alert/AlertContext'
+import { GithubProvider } from './context/github/GithubContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Profile from './pages/Profile'
@@ -29,27 +30,29 @@ function App () {
   return (
 
     <AlertProvider>
-      <BrowserRouter>
-        <div className="App">
+      <GithubProvider>
+        <BrowserRouter>
+          <div className="App">
 
-          <h1>livingtheOKlife</h1>
+            <h1>livingtheOKlife</h1>
 
-          <Toast />
+            <Toast />
 
-          <HeaderContainer />
+            <HeaderContainer />
 
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/not-found' element={<NotFound />} />
-            <Route path='/*' element={<NotFound />} />
-          </Routes>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/profile' element={<Profile />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/not-found' element={<NotFound />} />
+              <Route path='/*' element={<NotFound />} />
+            </Routes>
 
-          <FooterContainer />
+            <FooterContainer />
 
-        </div>
-      </BrowserRouter>
+          </div>
+        </BrowserRouter>
+      </GithubProvider>
     </AlertProvider>
 
   )
