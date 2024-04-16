@@ -42,7 +42,7 @@ function App () {
 
             <Routes>
               <Route path='/' element={<Home />} />
-              <Route path='/profile' element={<Profile />} />
+              <Route path='/profile/:login' element={<Profile />} />
               <Route path='/about' element={<About />} />
               <Route path='/not-found' element={<NotFound />} />
               <Route path='/*' element={<NotFound />} />

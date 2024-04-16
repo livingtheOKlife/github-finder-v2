@@ -26,6 +26,8 @@ export function GithubProvider ({ children }) {
   
   const initialState = {
     users: [],
+    user: {},
+    repos: [],
     loading: false
   }
   

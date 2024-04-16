@@ -18,3 +18,18 @@ export const searchUsers = async (text) => {
   return data.items
 
 }
+
+export const getUserAndRepos = async (login) => {
+
+  const userReponse = await fetch(`${GITHUB_URL}/users/${login}`)
+  const reposReponse = await fetch(`${GITHUB_URL}/users/${login}/repos`)
+
+  const user = await userReponse.json()
+  const repos = await reposReponse.json()
+
+  return {
+    user: user,
+    repos: repos
+  }
+
+}
