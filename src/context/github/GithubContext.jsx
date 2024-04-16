@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
-import { createContext, useState } from 'react';
+import { createContext, useReducer } from 'react';
+import GithubReducer from './GithubReducer';
 
 const GithubContext = createContext()
 
@@ -21,40 +22,24 @@ const GithubContext = createContext()
 
 export function GithubProvider ({ children }) {
 
-  // ------------------------- state
-
-  const [users, setUsers] = useState([])
-  const [loading, setLoading] = useState(false)
-
-  // ------------------------- fetchUsers
-
-  const fetchUsers = async () => {
-
-    setLoading(true)
-
-    const res = await fetch(`${process.env.REACT_APP_GITHUB_URL}/users`, {
-      headers: {
-        Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
-      }
-    })
-
-    const data = await res.json()
-
-    setUsers(data)
-    setLoading(false)
-
+  // ------------------------- initialState
+  
+  const initialState = {
+    users: [],
+    loading: false
   }
+  
+  // ------------------------- reducer
+
+  const [state, dispatch] = useReducer(GithubReducer, initialState)
 
   // ------------------------- return
   
   return (
 
     <GithubContext.Provider value={{
-      users,
-      setUsers,
-      loading,
-      setLoading,
-      fetchUsers
+      ...state,
+      dispatch,
     }}>
 
       {children}

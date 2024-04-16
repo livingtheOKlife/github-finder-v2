@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import GithubContext from '../../context/github/GithubContext'
 import Loading from '../shared/Loading'
 import ResultsItem from './ResultsItem'
@@ -21,15 +21,7 @@ function ResultsList () {
   
   // ------------------------- context
 
-  const { users, loading, fetchUsers } = useContext(GithubContext)
-
-  // ------------------------- side effects
-
-  useEffect(() => {
-
-    fetchUsers()
-
-  }, [])
+  const { users, loading } = useContext(GithubContext)
 
   // ------------------------- return
   
