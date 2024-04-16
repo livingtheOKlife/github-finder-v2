@@ -1,9 +1,10 @@
 import { useContext, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import GithubContext from '../context/github/GithubContext'
 import { getUserAndRepos } from '../context/github/GithubActions'
 import MainContainer from '../components/layout/MainContainer'
 import Loading from '../components/shared/Loading'
+import { FaUsers, FaUserFriends, FaCode, FaStore } from 'react-icons/fa'
 
 /**--------------------------------------------------------------------------- Profile page function
  * 
@@ -39,7 +40,6 @@ function Profile () {
 
       const userData = await getUserAndRepos(params.login)
       dispatch({type: 'GET_USER_AND_REPOS', payload: userData})
-      console.log(userData)
 
     }
 
@@ -52,9 +52,19 @@ function Profile () {
 
   return (
 
-    loading ? <Loading />
+    user === undefined && !loading ?
 
-    : <MainContainer className='profile'>MainContainer - page</MainContainer>
+      <></>
+
+    : loading ? <Loading />
+
+    : <MainContainer className='profile'>
+
+        <section className="control">
+          <Link to='/' className='btn btn-ghost'>Return to Search</Link>
+        </section>
+
+      </MainContainer>
 
   )
 
