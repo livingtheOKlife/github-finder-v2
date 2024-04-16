@@ -1,10 +1,6 @@
 import MainContainer from '../components/layout/MainContainer'
 import ResultsList from '../components/users/ResultsList'
 
-import { useEffect, useContext } from 'react'
-
-import AlertContext from '../context/alert/AlertContext'
-
 /**--------------------------------------------------------------------------- Home page function
  * 
  * @name Home
@@ -20,14 +16,6 @@ import AlertContext from '../context/alert/AlertContext'
  * -------------------------------------------------- */
 
 function Home () {
-
-  const { setToastActive } = useContext(AlertContext)
-
-  useEffect(() => {
-
-    setToastActive('testing the toast', 'success')
-
-  }, [])
 
   // ------------------------- return
 
