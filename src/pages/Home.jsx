@@ -1,4 +1,5 @@
 import MainContainer from '../components/layout/MainContainer'
+import SearchBar from '../components/users/SearchBar'
 import ResultsList from '../components/users/ResultsList'
 
 /**--------------------------------------------------------------------------- Home page function
@@ -22,6 +23,8 @@ function Home () {
   return (
 
     <MainContainer className='home'>
+
+      <SearchBar />
 
       <ResultsList />
       

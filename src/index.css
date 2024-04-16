@@ -668,26 +668,29 @@ main a:not(.btn):hover {
 }
 
 .icon-btn {
-  font-size: 21px;
+  font-size: 18px;
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
   letter-spacing: 1.16px;
   line-height: 1.42;
   text-transform: uppercase;
+  display: flex;
+  padding: 16px;
+  border-radius: 50%;
 }
 @media screen and (min-width: 600px) {
   .icon-btn {
-    font-size: 22.68px;
+    font-size: 19.44px;
   }
 }
 @media screen and (min-width: 768px) {
   .icon-btn {
-    font-size: 24.4944px;
+    font-size: 20.9952px;
   }
 }
 @media screen and (min-width: 992px) {
   .icon-btn {
-    font-size: 26.453952px;
+    font-size: 22.674816px;
   }
 }
 
@@ -731,12 +734,14 @@ main a:not(.btn):hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
 
-input {
+input[type=text] {
   font-family: "Comfortaa", sans-serif;
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 1.16px;
   line-height: 1.42;
+  width: 100%;
+  max-width: 350px;
   outline: 1px solid rgba(0, 0, 0, 0.16);
   padding: 16px 24px;
   border: none;
@@ -744,26 +749,26 @@ input {
   background-color: rgba(0, 0, 0, 0.08);
   transition: all 0.16s ease-in-out;
 }
-input::-moz-placeholder {
+input[type=text]::-moz-placeholder {
   text-transform: capitalize;
 }
-input::placeholder {
+input[type=text]::placeholder {
   text-transform: capitalize;
 }
-input:hover {
+input[type=text]:hover {
   outline: 1px solid hsl(210, 96%, 40%);
 }
-input:focus {
+input[type=text]:focus {
   outline: 1px solid hsl(92, 64%, 48%);
 }
 @media (prefers-color-scheme: dark) {
-  input {
+  input[type=text] {
     background-color: hsl(210, 0%, 98%);
   }
-  input:hover {
+  input[type=text]:hover {
     outline: 1px solid hsl(32, 96%, 48%);
   }
-  input:focus {
+  input[type=text]:focus {
     outline: 1px solid hsl(92, 64%, 48%);
   }
 }
@@ -1111,6 +1116,15 @@ label.copyright {
   height: 100%;
   overflow-y: scroll;
   padding: 32px;
+}
+#main-container.home form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 550px;
+  margin: auto;
 }
 #main-container.home ul {
   display: flex;
