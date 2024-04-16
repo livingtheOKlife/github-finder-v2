@@ -41,7 +41,7 @@ function SearchBar () {
 
       <input type="text" id='text' value={text} placeholder='Username...' onChange={onChange} />
 
-      <button type="submit" className="icon-btn btn-main">
+      <button type="submit" className="icon-btn btn-main" disabled={text.length === 0 ? true : false}>
         <FaSearch />
       </button>
 
