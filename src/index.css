@@ -474,131 +474,131 @@ footer nav a:hover {
   font-weight: 600;
 }
 
-a:not(.btn) {
-  color: hsl(210, 96%, 40%);
-  transition: all 0.16s ease-in-out;
+main a:not(.btn) {
   font-family: "Comfortaa", sans-serif;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 1.16px;
   line-height: 1.42;
+  color: hsl(210, 96%, 40%);
+  transition: all 0.16s ease-in-out;
 }
-a:not(.btn).xl {
+main a:not(.btn).xl {
   font-size: 19px;
 }
 @media screen and (min-width: 600px) {
-  a:not(.btn).xl {
+  main a:not(.btn).xl {
     font-size: 20.52px;
   }
 }
 @media screen and (min-width: 768px) {
-  a:not(.btn).xl {
+  main a:not(.btn).xl {
     font-size: 22.1616px;
   }
 }
 @media screen and (min-width: 992px) {
-  a:not(.btn).xl {
+  main a:not(.btn).xl {
     font-size: 23.934528px;
   }
 }
-a:not(.btn).la {
+main a:not(.btn).la {
   font-size: 16px;
 }
 @media screen and (min-width: 600px) {
-  a:not(.btn).la {
+  main a:not(.btn).la {
     font-size: 17.28px;
   }
 }
 @media screen and (min-width: 768px) {
-  a:not(.btn).la {
+  main a:not(.btn).la {
     font-size: 18.6624px;
   }
 }
 @media screen and (min-width: 992px) {
-  a:not(.btn).la {
+  main a:not(.btn).la {
     font-size: 20.155392px;
   }
 }
-a:not(.btn).me {
+main a:not(.btn).me {
   font-size: 14px;
 }
 @media screen and (min-width: 600px) {
-  a:not(.btn).me {
+  main a:not(.btn).me {
     font-size: 15.12px;
   }
 }
 @media screen and (min-width: 768px) {
-  a:not(.btn).me {
+  main a:not(.btn).me {
     font-size: 16.3296px;
   }
 }
 @media screen and (min-width: 992px) {
-  a:not(.btn).me {
+  main a:not(.btn).me {
     font-size: 17.635968px;
   }
 }
-a:not(.btn).sm {
+main a:not(.btn).sm {
   font-size: 12px;
 }
 @media screen and (min-width: 600px) {
-  a:not(.btn).sm {
+  main a:not(.btn).sm {
     font-size: 12.96px;
   }
 }
 @media screen and (min-width: 768px) {
-  a:not(.btn).sm {
+  main a:not(.btn).sm {
     font-size: 13.9968px;
   }
 }
 @media screen and (min-width: 992px) {
-  a:not(.btn).sm {
+  main a:not(.btn).sm {
     font-size: 15.116544px;
   }
 }
-a:not(.btn).xs {
+main a:not(.btn).xs {
   font-size: 10px;
 }
 @media screen and (min-width: 600px) {
-  a:not(.btn).xs {
+  main a:not(.btn).xs {
     font-size: 10.8px;
   }
 }
 @media screen and (min-width: 768px) {
-  a:not(.btn).xs {
+  main a:not(.btn).xs {
     font-size: 11.664px;
   }
 }
 @media screen and (min-width: 992px) {
-  a:not(.btn).xs {
+  main a:not(.btn).xs {
     font-size: 12.59712px;
   }
 }
-a:not(.btn).copyright {
+main a:not(.btn).copyright {
   font-size: 8px;
 }
 @media screen and (min-width: 600px) {
-  a:not(.btn).copyright {
+  main a:not(.btn).copyright {
     font-size: 8.64px;
   }
 }
 @media screen and (min-width: 768px) {
-  a:not(.btn).copyright {
+  main a:not(.btn).copyright {
     font-size: 9.3312px;
   }
 }
 @media screen and (min-width: 992px) {
-  a:not(.btn).copyright {
+  main a:not(.btn).copyright {
     font-size: 10.077696px;
   }
 }
-a:not(.btn):hover {
+main a:not(.btn):hover {
   color: hsl(32, 96%, 48%);
 }
 @media (prefers-color-scheme: dark) {
-  a:not(.btn) {
+  main a:not(.btn) {
     color: hsl(32, 96%, 48%);
   }
-  a:not(.btn):hover {
+  main a:not(.btn):hover {
     color: hsl(210, 96%, 40%);
   }
 }
@@ -647,6 +647,9 @@ a:not(.btn):hover {
   letter-spacing: 1.16px;
   line-height: 1.42;
   text-transform: uppercase;
+  padding: 12px 32px;
+  border-radius: 8px;
+  margin-top: 16px;
 }
 @media screen and (min-width: 600px) {
   .btn {
@@ -686,6 +689,46 @@ a:not(.btn):hover {
   .icon-btn {
     font-size: 26.453952px;
   }
+}
+
+.ctrl-btn {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  transition: all 0.16s ease-in-out;
+}
+@media screen and (min-width: 600px) {
+  .ctrl-btn {
+    font-size: 12.96px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ctrl-btn {
+    font-size: 13.9968px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .ctrl-btn {
+    font-size: 15.116544px;
+  }
+}
+.ctrl-btn.btn-light {
+  background-color: rgba(0, 0, 0, 0);
+  color: hsl(210, 100%, 2%);
+}
+.ctrl-btn.btn-light:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.ctrl-btn.btn-dark {
+  background-color: rgba(255, 255, 255, 0);
+  color: hsl(210, 0%, 98%);
+}
+.ctrl-btn.btn-dark:hover {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 input {
@@ -1000,8 +1043,10 @@ label.copyright {
 }
 
 #header-container {
+  background-color: hsl(210, 96%, 40%);
+  color: hsl(210, 0%, 98%);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 4px 8px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.32);
 }
 #header-container nav#main-nav {
   display: flex;
@@ -1020,15 +1065,10 @@ label.copyright {
   font-family: "Poppins", sans-serif;
   font-size: 22px;
   font-weight: 300;
-  color: hsl(210, 100%, 2%);
+  color: hsl(210, 0%, 98%);
 }
 #header-container nav#main-nav span svg {
   font-size: 32px;
-}
-@media (prefers-color-scheme: dark) {
-  #header-container nav#main-nav span {
-    color: hsl(210, 0%, 98%);
-  }
 }
 #header-container nav#main-nav .links {
   display: flex;
@@ -1037,16 +1077,19 @@ label.copyright {
 }
 #header-container nav#main-nav .links a {
   padding: 8px;
-  font-size: 16px;
-  color: hsl(210, 100%, 2%);
+  font-size: 19px;
+  color: hsl(210, 0%, 98%);
+  transition: all 0.16s ease-in-out;
 }
 @media (prefers-color-scheme: dark) {
-  #header-container nav#main-nav .links a {
-    color: hsl(210, 0%, 98%);
+  #header-container {
+    background-color: rgba(0, 0, 0, 0.32);
   }
 }
 
 #footer-container {
+  background-color: hsl(210, 96%, 40%);
+  color: hsl(210, 0%, 98%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1054,7 +1097,14 @@ label.copyright {
   gap: 6px;
   width: 100%;
   padding: 16px;
-  background-color: rgba(0, 0, 0, 0.32);
+}
+#footer-container span.brand em {
+  color: hsl(32, 96%, 48%);
+}
+@media (prefers-color-scheme: dark) {
+  #footer-container {
+    background-color: rgba(0, 0, 0, 0.32);
+  }
 }
 
 #main-container {
@@ -1079,9 +1129,10 @@ label.copyright {
   width: 100%;
   max-width: 350px;
   padding: 16px;
-  border-radius: 16px;
+  border-radius: 8px;
   margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.16);
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 4px 8px;
 }
 #main-container.home ul li img {
   width: 64px;
@@ -1130,11 +1181,6 @@ label.copyright {
   justify-content: center;
   align-items: center;
   gap: 16px;
-}
-#main-container.not-found .btn {
-  padding: 12px 32px;
-  border-radius: 8px;
-  margin-top: 16px;
 }
 
 .loading {
