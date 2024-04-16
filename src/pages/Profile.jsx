@@ -64,6 +64,99 @@ function Profile () {
           <Link to='/' className='btn btn-ghost'>Return to Search</Link>
         </section>
 
+        <section className="user">
+
+          <div className="avatar">
+
+            <img src={user.avatar_url} alt={`${user.login}'s profile`} />
+
+            <div className="overlay">
+
+              <p className="xl">{user.login}</p>
+              <p className="me">{user.name}</p>
+
+            </div>
+
+          </div>
+
+          <div className="details">
+
+            <h2>{user.name}</h2>
+
+            <div className="badges">
+
+              <p className="copyright">user</p>
+              
+              {
+                user.hireable && <p className="copyright">hireable</p>
+              }
+
+            </div>
+
+            <p className="sm bio">{user.bio}</p>
+
+            <a href={user.html_url} className="btn btn-main">Visit Github Profile</a>
+
+          </div>
+
+        </section>
+
+        <section className="details-bar title-value">
+
+          {
+            user.location &&
+            <div className="detail">
+              <p className="la">Location</p>
+              <p className="sm">{user.location}</p>
+            </div>
+          }
+
+          {
+            user.blog &&
+            <div className="detail">
+              <p className="la">Website</p>
+              <p className="sm">{user.blog}</p>
+            </div>
+          }
+
+          {
+            user.twitter_username &&
+            <div className="detail">
+              <p className="la">Twitter</p>
+              <a className="sm" href={`https://twitter.com/${user.twitter_username}`} target='_blank' rel='noreferrer'>{user.twitter_username}</a>
+            </div>
+          }
+
+        </section>
+
+        <section className="details-bar icon-title-value">
+
+          <div className="detail">
+            <FaUserFriends />
+            <p className="xs">Followers</p>
+            <p className="xl">{user.followers}</p>
+          </div>
+
+          <div className="detail">
+            <FaUsers />
+            <p className="xs">Following</p>
+            <p className="xl">{user.following}</p>
+          </div>
+
+          <div className="detail">
+            <FaCode />
+            <p className="xs">Public Repos</p>
+            <p className="xl">{user.public_repos}</p>
+          </div>
+
+          <div className="detail">
+            <FaStore />
+            <p className="xs">Public Gists</p>
+            <p className="xl">{user.public_gists}</p>
+          </div>
+
+        </section>
+
       </MainContainer>
 
   )

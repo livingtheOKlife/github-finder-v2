@@ -21,6 +21,8 @@ import FooterContainer from './components/layout/FooterContainer'
  * 
  * @date 13.04.2024
  * 
+ * @todo styles for extra small devices
+ * 
  * -------------------------------------------------- */
 
 function App () {

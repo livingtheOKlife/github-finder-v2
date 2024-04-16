@@ -1193,10 +1193,108 @@ label.copyright {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+#main-container.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
 #main-container.profile .control {
   display: flex;
   justify-content: end;
-  margin: -16px -16px 0 0;
+  margin: -16px;
+}
+#main-container.profile .user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+#main-container.profile .user .avatar {
+  display: grid;
+  grid-template-areas: "grid";
+  width: 256px;
+  margin: 0 auto;
+}
+#main-container.profile .user .avatar > * {
+  grid-area: grid;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+#main-container.profile .user .avatar .overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding: 48px;
+  background-color: rgba(0, 0, 0, 0.64);
+}
+#main-container.profile .user .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+#main-container.profile .user .details h2 {
+  font-size: 32px;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  #main-container.profile .user .details h2 {
+    font-size: 34.56px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #main-container.profile .user .details h2 {
+    font-size: 37.3248px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #main-container.profile .user .details h2 {
+    font-size: 40.310784px;
+  }
+}
+#main-container.profile .user .details .badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+#main-container.profile .user .details .badges p {
+  padding: 6px 12px;
+  background-color: rgba(0, 0, 0, 0.16);
+  text-transform: capitalize;
+}
+#main-container.profile .user .details .badges p:first-of-type {
+  color: hsl(211, 48%, 48%);
+}
+#main-container.profile .user .details .badges p:last-of-type {
+  color: hsl(92, 64%, 48%);
+}
+#main-container.profile .user .details p.bio {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: center;
+}
+#main-container.profile .details-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#main-container.profile .details-bar .detail {
+  width: 100%;
+  max-width: 350px;
+  padding: 16px;
+  border-radius: 16px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 4px 8px;
+}
+#main-container.profile .details-bar.title-value .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 #main-container.about {
   display: flex;
