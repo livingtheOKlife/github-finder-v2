@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect } from 'react'
+import GithubContext from '../../context/github/GithubContext'
 import Loading from '../shared/Loading'
 import ResultsItem from './ResultsItem'
 
@@ -17,12 +18,11 @@ import ResultsItem from './ResultsItem'
  * -------------------------------------------------- */
 
 function ResultsList () {
-
-  // ------------------------- state
-
-  const [users, setUsers] = useState([])
-  const [loading, setLoading] = useState(false)
   
+  // ------------------------- context
+
+  const { users, loading, fetchUsers } = useContext(GithubContext)
+
   // ------------------------- side effects
 
   useEffect(() => {
@@ -30,25 +30,6 @@ function ResultsList () {
     fetchUsers()
 
   }, [])
-
-  // ------------------------- fetchUsers
-
-  const fetchUsers = async () => {
-
-    setLoading(true)
-
-    const res = await fetch(`${process.env.REACT_APP_GITHUB_URL}/users`, {
-      headers: {
-        Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
-      }
-    })
-
-    const data = await res.json()
-
-    setUsers(data)
-    setLoading(false)
-
-  }
 
   // ------------------------- return
   
