@@ -1126,6 +1126,11 @@ label.copyright {
   overflow-y: scroll;
   padding: 32px;
 }
+#main-container.home {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
 #main-container.home form {
   display: flex;
   justify-content: center;
