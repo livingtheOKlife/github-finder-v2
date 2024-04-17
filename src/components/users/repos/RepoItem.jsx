@@ -3,8 +3,6 @@ import { FaEye, FaInfo, FaLink, FaStar, FaUtensils } from 'react-icons/fa'
 
 function RepoItem ({ repo }) {
 
-  console.log(repo)
-
   return (
 
     <li>
