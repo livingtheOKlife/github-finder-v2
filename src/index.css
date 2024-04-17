@@ -1201,6 +1201,9 @@ label.copyright {
   overflow-y: scroll;
   padding: 32px;
 }
+#main-container p.empty {
+  margin: 0 auto;
+}
 #main-container.home {
   display: flex;
   flex-direction: column;
@@ -1214,9 +1217,6 @@ label.copyright {
   gap: 16px;
   width: 100%;
   max-width: 550px;
-  margin: 0 auto;
-}
-#main-container.home p.no-users {
   margin: 0 auto;
 }
 #main-container.home ul {
@@ -1274,6 +1274,44 @@ label.copyright {
   flex-direction: column;
   gap: 32px;
 }
+#main-container.profile h2 {
+  font-size: 32px;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  #main-container.profile h2 {
+    font-size: 34.56px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #main-container.profile h2 {
+    font-size: 37.3248px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #main-container.profile h2 {
+    font-size: 40.310784px;
+  }
+}
+#main-container.profile h3 {
+  font-size: 24px;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  #main-container.profile h3 {
+    font-size: 25.92px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #main-container.profile h3 {
+    font-size: 27.9936px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #main-container.profile h3 {
+    font-size: 30.233088px;
+  }
+}
 #main-container.profile .control {
   display: flex;
   justify-content: end;
@@ -1310,25 +1348,6 @@ label.copyright {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-}
-#main-container.profile .user .details h2 {
-  font-size: 32px;
-  text-align: center;
-}
-@media screen and (min-width: 600px) {
-  #main-container.profile .user .details h2 {
-    font-size: 34.56px;
-  }
-}
-@media screen and (min-width: 768px) {
-  #main-container.profile .user .details h2 {
-    font-size: 37.3248px;
-  }
-}
-@media screen and (min-width: 992px) {
-  #main-container.profile .user .details h2 {
-    font-size: 40.310784px;
-  }
 }
 #main-container.profile .user .details .badges {
   display: flex;

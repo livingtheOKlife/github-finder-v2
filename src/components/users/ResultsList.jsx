@@ -37,7 +37,7 @@ function ResultsList () {
 
     : users.length === 0 ?
       
-      <p className='no-users'>No users to display...</p>
+      <p className='empty'>No users to display...</p>
 
     : <ul>
 

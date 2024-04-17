@@ -4,6 +4,7 @@ import GithubContext from '../context/github/GithubContext'
 import { getUserAndRepos } from '../context/github/GithubActions'
 import MainContainer from '../components/layout/MainContainer'
 import Loading from '../components/shared/Loading'
+import RepoList from '../components/users/repos/RepoList'
 import { FaUsers, FaUserFriends, FaCode, FaStore } from 'react-icons/fa'
 
 /**--------------------------------------------------------------------------- Profile page function
@@ -85,10 +86,10 @@ function Profile () {
 
             <div className="badges">
 
-              <p className="badge red">user</p>
+              <p className="badge blue">user</p>
               
               {
-                user.hireable && <p className="badge red">hireable</p>
+                user.hireable && <p className="badge green">hireable</p>
               }
 
             </div>
@@ -154,6 +155,21 @@ function Profile () {
             <p className="xs">Public Gists</p>
             <p className="xl">{user.public_gists}</p>
           </div>
+
+        </section>
+
+        <section className="repos">
+
+          {
+            repos === undefined || repos.length === 0 ?
+              
+              <p className="empty">No repos to display...</p>
+            
+            : <>
+                <h3>Latest Repositories</h3>
+                <RepoList repos={repos} />
+              </>
+          }
 
         </section>
 
