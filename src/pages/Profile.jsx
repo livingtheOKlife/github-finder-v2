@@ -85,10 +85,10 @@ function Profile () {
 
             <div className="badges">
 
-              <p className="copyright">user</p>
+              <p className="badge red">user</p>
               
               {
-                user.hireable && <p className="copyright">hireable</p>
+                user.hireable && <p className="badge red">hireable</p>
               }
 
             </div>
