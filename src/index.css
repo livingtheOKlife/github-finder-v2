@@ -1267,6 +1267,11 @@ label.copyright {
   flex-direction: column;
   gap: 32px;
 }
+#main-container.profile section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 #main-container.profile h2 {
   font-size: 32px;
   text-align: center;
@@ -1309,6 +1314,11 @@ label.copyright {
   display: flex;
   justify-content: end;
   margin: -16px;
+}
+@media screen and (min-width: 992px) {
+  #main-container.profile .control {
+    margin: -16px auto;
+  }
 }
 #main-container.profile .user {
   display: flex;
@@ -1401,6 +1411,23 @@ label.copyright {
 @media screen and (min-width: 992px) {
   #main-container.profile .details-bar.icon-title-value .detail p.xl {
     font-size: 40.310784px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #main-container.profile .details-bar {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+  }
+  #main-container.profile .details-bar .detail {
+    max-width: none;
+    border-radius: 0;
+  }
+  #main-container.profile .details-bar .detail:first-of-type {
+    border-radius: 16px 0 0 16px;
+  }
+  #main-container.profile .details-bar .detail:last-of-type {
+    border-radius: 0 16px 16px 0;
   }
 }
 #main-container.profile .repos {
