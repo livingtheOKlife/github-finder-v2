@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import RepoItem from './RepoItem'
 
 function RepoList ({ repos }) {
 
@@ -7,8 +8,8 @@ function RepoList ({ repos }) {
     <ul>
 
       {
-        repos.map((user) => (
-          <li>RepoItem</li>
+        repos.map((repo) => (
+          <RepoItem repo={repo} key={repo.name}/>
         ))
       }
       
