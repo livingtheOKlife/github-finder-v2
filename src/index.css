@@ -1467,11 +1467,11 @@ label.copyright {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.bg-trans-dark-08, #toast .toast-bg .progress-bar .bg, #main-container.profile .details-bar .detail, #main-container.home ul li {
+.bg-trans-dark-08, #toast .toast-bg .progress-bar .bg, #main-container.profile .repos ul li, #main-container.profile .details-bar .detail, #main-container.home ul li {
   background-color: rgba(0, 0, 0, 0.08);
 }
 
-.bg-trans-dark-16, #toast .toast-bg button:hover, #toast .toast-bg, #main-container.profile .repos ul li {
+.bg-trans-dark-16, #toast .toast-bg button:hover, #toast .toast-bg {
   background-color: rgba(0, 0, 0, 0.16);
 }
 
@@ -1613,6 +1613,12 @@ label.copyright {
 #main-container.profile .repos ul li {
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 4px 8px;
 }
+@media (prefers-color-scheme: dark) {
+  #main-container.profile .repos ul li {
+    background-color: rgba(0, 0, 0, 0.16);
+  }
+}
+
 #header-container {
   background-color: hsl(210, 96%, 40%);
   color: hsl(210, 0%, 98%);
