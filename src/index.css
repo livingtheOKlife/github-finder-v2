@@ -1362,6 +1362,7 @@ label.copyright {
   align-items: center;
   padding: 48px;
   background-color: rgba(0, 0, 0, 0.64);
+  color: hsl(210, 0%, 98%);
 }
 #main-container.profile .user .details {
   display: flex;
