@@ -1152,6 +1152,15 @@ label.copyright {
 #header-container nav#main-nav span svg {
   font-size: 32px;
 }
+@media screen and (max-width: 450px) {
+  #header-container nav#main-nav span {
+    padding: 3px;
+    font-size: 14px;
+  }
+  #header-container nav#main-nav span svg {
+    font-size: 19px;
+  }
+}
 #header-container nav#main-nav .links {
   display: flex;
   align-items: center;
@@ -1162,6 +1171,12 @@ label.copyright {
   font-size: 19px;
   color: hsl(210, 0%, 98%);
   transition: all 0.16s ease-in-out;
+}
+@media screen and (max-width: 450px) {
+  #header-container nav#main-nav .links a {
+    padding: 3px;
+    font-size: 14px;
+  }
 }
 @media (prefers-color-scheme: dark) {
   #header-container {
